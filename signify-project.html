@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bo Lansdaal - Signify Project: Custom Adobe Data Collection</title>
+    <meta name="description" content="Detailed overview of Bo Lansdaal's role and responsibilities in the Custom Adobe Data Collection project at Signify.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-banner {
+            background-image: url("images/Signify_banner.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .project-banner h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .section-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: var(--color-primary);
+        }
+
+
+    #brands .row {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    #brands .col-6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #brands img {
+        max-height: 60px;
+        width: auto;
+        object-fit: contain;
+    }
+    .data-model-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-top: 20px;
+    }
+
+    .data-model-container img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .data-model-container:hover img {
+        transform: scale(1.05);
+    }
+
+    @media (min-width: 768px) {
+        .data-model-container {
+            max-height: 500px;
+        }
+
+        .data-model-container img {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .privacy-tools-illustration {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .privacy-tools-illustration:hover {
+        transform: translateY(-5px);
+    }
+
+    .tool-combo {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .tool-item {
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .privacy-tools-illustration:hover .tool-item {
+        transform: translateY(-5px);
+    }
+
+    .tool-icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 10px;
+    }
+
+    .tool-name {
+        font-weight: bold;
+        color: var(--color-secondary);
+    }
+
+    .privacy-flow {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .privacy-icon, .cookie-icon, .analytics-icon {
+        color: var(--color-primary);
+        transition: transform 0.3s ease;
+    }
+
+    .flow-arrow {
+        color: var(--color-secondary);
+        transition: transform 0.3s ease;
+    }
+
+    .privacy-tools-illustration:hover .privacy-icon,
+    .privacy-tools-illustration:hover .cookie-icon,
+    .privacy-tools-illustration:hover .analytics-icon {
+        animation: pulse 2s infinite;
+    }
+
+    .privacy-tools-illustration:hover .flow-arrow {
+        animation: slideRight 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes slideRight {
+        0%, 100% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(10px);
+        }
+    }
+</style>
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">BL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#profile">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#experiences">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#expertise">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-banner">
+        <h1 class="display-4">Signify Project: Custom Adobe Data Collection</h1>
+    </header>
+
+    <main class="container my-5">
+        <section id="role" class="mb-5">
+            <h2><i class="fas fa-user-tie section-icon"></i>My Role at Signify</h2>
+            <p>In my role at Signify, I play a crucial part in shaping the company's digital landscape, focusing on data quality, tag management, and privacy compliance. My contributions span several key areas, each vital to Signify's digital success and customer-centric approach. Not only for Signify, but for all of its global brands</p>
+        </section>
+        <section id="brands" class="mb-5">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-6 col-md-4 col-lg-2 mb-4">
+                    <img src="images/brand logos/philips.png" alt="Philips" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-4">
+                    <img src="images/brand logos/interact.png" alt="Interact" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-4">
+                    <img src="images/brand logos/philips-hue.png" alt="Philips Hue" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-4">
+                    <img src="images/brand logos/colorkinetics.png" alt="Color Kinetics" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-4">
+                    <img src="images/brand logos/wiz.png" alt="WiZ" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <section id="data-foundation" class="mb-5">
+            <h2><i class="fas fa-database section-icon"></i>Establishing a Robust Data Foundation</h2>
+            <p>At the heart of my responsibilities is ensuring the integrity and effectiveness of Signify's data collection processes. I take charge of documenting and maintaining both the classic Signify dataLayer and the new Flare dataLayer, creating a comprehensive foundation for data-driven decision making.</p>
+            <p>My day-to-day activities involve:</p>
+            <ul>
+                <li>Conducting thorough dataLayer checks and providing expert consulting</li>
+                <li>Collaborating with Business Analysts to define and align data stories</li>
+                <li>Addressing ad-hoc questions from BAs and developers</li>
+                <li>Managing dataLayer change requests and creating detailed briefing documentation</li>
+            </ul>
+            <p>This meticulous approach ensures that the data present in our dataLayers is not only correct but also efficiently distributed across Signify's reporting tools, enabling accurate end-to-end performance marketing analysis.</p>
+        </section>
+
+        <section id="data-model" class="mb-5">
+            <div class="data-model-container">
+                <img src="images/Signify_DM.png" alt="Signify Data Model" class="img-fluid">
+            </div>
+        </section>
+
+        <section id="tag-management" class="mb-5">
+            <h2><i class="fas fa-tags section-icon"></i>Mastering Tag Management</h2>
+            <p>I spearhead the strategy, governance, and architecture of Signify's tag management system. This encompasses:</p>
+            <ul>
+                <li>Overseeing properties, tags, and rules</li>
+                <li>Establishing and refining our way of working</li>
+                <li>Implementing third-party tags</li>
+                <li>Serving as the second line of support and a knowledge center for troubleshooting</li>
+            </ul>
+            <p>My efforts in this area focus on implementing and maintaining rules that collect data from relevant dataLayers and distribute it to second-party and third-party vendors. I take pride in ensuring that these rules are well-documented and easily readable, facilitating smooth operations and knowledge transfer within the team.</p>
+        </section>
+
+        <section id="privacy-compliance" class="mb-5">
+            <h2><i class="fas fa-shield-alt section-icon"></i>Championing Privacy and Compliance</h2>
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <p>In an era of increasing data privacy concerns, I take on the critical role of overseeing the implementation of the TrustArc Consent Management Platform. This position involves:</p>
+                    <ul>
+                        <li>Serving as the first point of contact with the vendor</li>
+                        <li>Reviewing cookie-scan results</li>
+                        <li>Conducting privacy checks on third-party scripts and data collection methods</li>
+                        <li>Acting as a knowledge center for privacy-related queries</li>
+                    </ul>
+                    <p>My efforts in this area ensure that Signify's global data collection practices align with the policies set forth by our Global Legal Team, maintaining compliance with international privacy regulations.</p>
+                </div>
+                <div class="col-md-5">
+                    <div class="privacy-tools-illustration">
+                        <div class="tool-combo">
+                            <div class="tool-item trustarc">
+                                <img src="images/icons/Trustarc icon.png" alt="TrustArc" class="tool-icon">
+                                <span class="tool-name">TrustArc</span>
+                            </div>
+                            <div class="tool-item adobe">
+                                <img src="images/icons/Adobe icon.png" alt="Adobe Suite" class="tool-icon">
+                                <span class="tool-name">Adobe</span>
+                            </div>
+                        </div>
+                        <div class="privacy-flow">
+                            <i class="fas fa-user-shield fa-3x privacy-icon"></i>
+                            <i class="fas fa-arrow-right fa-2x flow-arrow"></i>
+                            <i class="fas fa-cookie-bite fa-3x cookie-icon"></i>
+                            <i class="fas fa-arrow-right fa-2x flow-arrow"></i>
+                            <i class="fas fa-chart-line fa-3x analytics-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="conclusion" class="mb-5">
+            <h2><i class="fas fa-check-circle section-icon"></i>Conclusion</h2>
+            <p>In my role at Signify, I strive to create a seamless integration between data quality, user experience, and privacy compliance. By establishing robust data foundations, optimizing tag management, and ensuring adherence to privacy standards, I contribute to Signify's digital transformation and its commitment to responsible data practices.</p>
+            <p>My position demands a unique blend of technical expertise, strategic thinking, and cross-functional collaboration. It's a challenging yet rewarding experience that allows me to make a meaningful impact on Signify's digital ecosystem and, by extension, on the experiences of our customers worldwide.</p>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 Bo Lansdaal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
