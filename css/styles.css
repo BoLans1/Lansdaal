@@ -289,3 +289,20 @@ section h2::after {
         margin-bottom: 30px;
     }
 }
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 30px;
+    }
+}
+
+    .footer-logo {
+        height: 50px;
+        width: auto;
+        margin-bottom: 1rem;
+    }
