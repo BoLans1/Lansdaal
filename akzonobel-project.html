@@ -52,10 +52,13 @@
         .responsibility-card:hover {
             transform: translateY(-5px);
         }
+        .mr-2{
+            size: 100%;
+        }
         .tech-icon {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: var(--color-primary);
+            color: darkblue
         }
         .outcome-item {
             display: flex;
@@ -67,6 +70,33 @@
             margin-right: 1rem;
             color: var(--color-secondary);
         }
+
+        .data-model-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-top: 20px;
+    }
+
+    .data-model-container img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .data-model-container:hover img {
+        transform: scale(1.05);
+    }
+
+    @media (min-width: 768px) {
+        
+
+        .data-model-container img {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
     </style>
 </head>
 <body>
@@ -166,6 +196,12 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="data-model" class="mb-5">
+            <div class="data-model-container">
+                <img src="images/First Party Pixel framework.png" alt="First Party Pixel Framework" class="img-fluid">
             </div>
         </section>
 
