@@ -35,17 +35,37 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-    // Form submission handling
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Here you would typically send the form data to a server
-        // For this example, we'll just log the data and show an alert
-        const formData = new FormData(contactForm);
-        console.log('Form data:', Object.fromEntries(formData));
-        alert('Thank you for your message! I\'ll get back to you soon.');
-        contactForm.reset();
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        // Get form values safely
+        var fromName = this.elements['name'] ? this.elements['name'].value : '';
+        var fromEmail = this.elements['email'] ? this.elements['email'].value : '';
+        var message = this.elements['message'] ? this.elements['message'].value : '';
+    
+        // Log the values to check if they're being captured correctly
+        console.log('Name:', fromName);
+        console.log('Email:', fromEmail);
+        console.log('Message:', message);
+    
+        // Prepare template parameters
+        var templateParams = {
+            from_name: fromName,
+            from_email: fromEmail,
+            message: message
+        };
+    
+        emailjs.send('service_n7tbqg4', 'template_1qe2e94', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Your message has been sent successfully!');
+                document.getElementById('contact-form').reset();
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Failed to send the message. Please try again later.');
+            });
     });
+
 
     // Project filter functionality (if needed)
     // This assumes you have filter buttons with data-filter attributes
