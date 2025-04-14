@@ -15,93 +15,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/Bo logo.png">
-    <title>Bo Lansdaal - FrieslandCampina Project: GDPR Compliance & GA4 Migration</title>
+    <title>FrieslandCampina Project - Bo Lansdaal</title>
     <meta name="description"
-        content="Detailed overview of Bo Lansdaal's role in the GDPR Compliance & GA4 Migration project at FrieslandCampina.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        content="Case study of Bo Lansdaal's work with FrieslandCampina implementing GDPR-compliant analytics and GA4 migration across global websites.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
-    <style>
-        .project-banner {
-            background-image: url('images/FrieslandCampina_banner.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .project-banner h1 {
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .section-icon {
-            font-size: 2rem;
-            margin-right: 1rem;
-            color: var(--color-primary);
-        }
-
-        .implementation-model-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-
-        .implementation-model-container img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .implementation-model-container:hover img {
-            transform: scale(1.05);
-        }
-
-        @media (min-width: 768px) {
-            .implementation-model-container {
-                max-height: 500px;
-            }
-
-            .implementation-model-container img {
-                object-fit: contain;
-                object-position: center;
-            }
-        }
-
-        .navbar-brand img {
-            height: 40px;
-            width: auto;
-        }
-
-        @media (max-width: 768px) {
-            .navbar-brand img {
-                height: 30px;
-            }
-        }
-
-
-        .footer-logo {
-            height: 50px;
-            width: auto;
-            margin-bottom: 1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59MSPDPJ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" height="40">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" height="40" class="me-2">
+                <span>BL</span>
             </a>
-            <a class="navbar-brand" href="index.html">BL</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -112,7 +51,6 @@
                     <li class="nav-item"><a class="nav-link" href="index.html#profile">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#experiences">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#expertise">Expertise</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
                 </ul>
@@ -120,95 +58,443 @@
         </div>
     </nav>
 
-    <header class="project-banner">
-        <h1 class="display-4">FrieslandCampina Project: GDPR Compliance & GA4 Migration</h1>
+    <header class="project-banner" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/friesland-campina-banner.jpg') center/cover no-repeat;">
+        <div class="container text-center" data-aos="fade-up">
+            <div class="mb-4">
+                <img src="images/friesland-campina-logo.png" alt="FrieslandCampina" class="img-fluid" style="max-height: 200px; filter: brightness(0) invert(1);">
+            </div>
+            <h1 class="display-4 text-white fw-bold">GDPR Compliance & GA4 Migration</h1>
+            <div class="mt-4">
+                <span class="badge bg-primary rounded-pill px-3 py-2 me-2">Google Analytics 4</span>
+                <span class="badge bg-secondary rounded-pill px-3 py-2 me-2">GDPR Compliance</span>
+                <span class="badge bg-success rounded-pill px-3 py-2 me-2">Privacy Framework</span>
+                <span class="badge bg-info text-dark rounded-pill px-3 py-2">Global Implementation</span>
+            </div>
+        </div>
     </header>
 
-    <main class="container my-5">
-        <section id="role" class="mb-5">
-            <h2><i class="fas fa-user-tie section-icon"></i>My Role at FrieslandCampina</h2>
-            <p>At FrieslandCampina, I served as a Technical Web Analyst and Compliance Expert. Hired as a consultant, my
-                primary responsibility was to assist the global IT and Marketing departments in gathering data across
-                their extensive network of over 200 websites and apps, developed by cooperative partners worldwide.
-                Although these partners built their own websites, the global department oversaw hosting, security,
-                tracking, and compliance, which fell under my purview to ensure proper tracking and compliance for all
-                online touchpoints.</p>
-        </section>
+    <main>
+        <section class="py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-8">
+                        <div data-aos="fade-right">
+                            <h2 class="h1 fw-bold mb-4">Project Overview</h2>
+                            <p class="lead">As Technical Web Analytics Consultant for FrieslandCampina, I led a comprehensive initiative to ensure GDPR compliance across their global digital ecosystem while simultaneously preparing them for the transition to Google Analytics 4.</p>
+                            <p>This dual-focus project required balancing technical implementation with strategic privacy considerations to create a framework that would support both current compliance requirements and future analytics capabilities.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm h-100" data-aos="fade-left">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold mb-4">Project Details</h3>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <div class="d-flex">
+                                            <i class="fas fa-calendar-alt text-primary me-2 mt-1"></i>
+                                            <div>
+                                                <strong>Timeline:</strong><br>
+                                                April 2022 - February 2023
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="d-flex">
+                                            <i class="fas fa-user-tie text-primary me-2 mt-1"></i>
+                                            <div>
+                                                <strong>Role:</strong><br>
+                                                Technical Web Analytics Consultant
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="d-flex">
+                                            <i class="fas fa-globe text-primary me-2 mt-1"></i>
+                                            <div>
+                                                <strong>Scope:</strong><br>
+                                                Global websites and digital properties
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex">
+                                            <i class="fas fa-tools text-primary me-2 mt-1"></i>
+                                            <div>
+                                                <strong>Tools:</strong><br>
+                                                Google Analytics 4, Google Tag Manager, Consent Management Platforms
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <section id="gdpr-compliance" class="mb-5">
-            <h2><i class="fas fa-shield-alt section-icon"></i>GDPR Compliance Framework Implementation</h2>
-            <p>To ensure that the company followed the GDPR, FrieslandCampina enlisted our expertise to create a
-                scalable and sustainable compliance solution. We developed a comprehensive technical blueprint for the
-                data collection framework, along with detailed guidelines and tools. I helped design a strategic
-                implementation guide that laid out a step-by-step approach for incorporating these guidelines across all
-                websites, culminating in a robust compliance framework.</p>
-            <p>Here's how it worked:</p>
-            <ol>
-                <li>Initial Setup: When a page or screen would load, the Tag Manager container was activated, deploying
-                    an injection tag that introduced an additional Google Tag Manager Container.</li>
-                <li>Centralized Administration: This extra container housed globally issued tags for the privacy
-                    framework and tracking scripts for Google Analytics (later Google Analytics 4).</li>
-                <li>Privacy Compliance: We integrated a OneTrust consent banner to present new users with options,
-                    recording and respecting their choices.</li>
-                <li>Custom Tracking: The container loaded tags and scripts based on the user's preferences—deactivating
-                    tags for Facebook or Google Ads if targeting cookies were declined.</li>
-            </ol>
-        </section>
+                <div class="row mb-5">
+                    <div class="col-12" data-aos="fade-up">
+                        <h2 class="h2 fw-bold mb-4">Key Achievements</h2>
+                    </div>
+                    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card border-0 shadow-sm h-100 achievement-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex">
+                                    <div class="achievement-icon me-4">
+                                        <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-3">GDPR Compliance Implementation</h3>
+                                        <p>Implemented comprehensive GDPR-compliant privacy frameworks across all FrieslandCampina websites, ensuring proper data collection practices and user consent mechanisms.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card border-0 shadow-sm h-100 achievement-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex">
+                                    <div class="achievement-icon me-4">
+                                        <i class="fas fa-chart-area fa-2x text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-3">GA4 Migration Strategy</h3>
+                                        <p>Designed and implemented a global Google Analytics 4 setup that prepared all websites for the transition from Universal Analytics while maintaining data continuity.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card border-0 shadow-sm h-100 achievement-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex">
+                                    <div class="achievement-icon me-4">
+                                        <i class="fas fa-sitemap fa-2x text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-3">Global Standardization</h3>
+                                        <p>Created standardized implementation templates and processes that enabled consistent tracking across different markets and brands within the FrieslandCampina portfolio.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card border-0 shadow-sm h-100 achievement-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex">
+                                    <div class="achievement-icon me-4">
+                                        <i class="fas fa-check-circle fa-2x text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-3">90% Implementation Rate</h3>
+                                        <p>Successfully achieved implementation of privacy frameworks and GA4 setups across 90% of all FrieslandCampina websites, setting a new standard for their digital analytics ecosystem.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <section id="implementation-model" class="mb-5">
-            <div class="implementation-model-container">
-                <img src="images/GA4 implentation.png" alt="GA4 Implementation Model" class="img-fluid">
+                <div class="row mb-5">
+                    <div class="col-12" data-aos="fade-up">
+                        <div class="card border-0 shadow-sm overflow-hidden">
+                            <div class="row g-0">
+                                <div class="col-md-6 p-4 p-lg-5">
+                                    <h2 class="h3 fw-bold mb-4">The Challenge</h2>
+                                    <p>FrieslandCampina faced significant challenges in their digital analytics landscape:</p>
+                                    <ul class="list-custom">
+                                        <li>Diverse digital ecosystem with numerous websites across different markets</li>
+                                        <li>Inconsistent tracking implementations and consent management approaches</li>
+                                        <li>Approaching deadline for Universal Analytics sunset</li>
+                                        <li>Need for GDPR compliance while maintaining analytics capabilities</li>
+                                        <li>Various stakeholders with different levels of technical understanding</li>
+                                    </ul>
+                                    <p>The project required balancing technical implementation with privacy compliance across a complex global organization.</p>
+                                </div>
+                                <div class="col-md-6 bg-light p-4 p-lg-5">
+                                    <h2 class="h3 fw-bold mb-4">The Solution</h2>
+                                    <p>I developed a comprehensive approach to address these challenges:</p>
+                                    <ul class="list-custom">
+                                        <li>Created a standardized privacy framework template adaptable to regional requirements</li>
+                                        <li>Designed a global GA4 implementation that captured essential business metrics</li>
+                                        <li>Developed clear documentation and implementation guidelines for all markets</li>
+                                        <li>Built a validation process to ensure proper compliance and data collection</li>
+                                        <li>Provided training and support to digital teams across the organization</li>
+                                    </ul>
+                                    <p>This integrated approach ensured both technical success and organizational adoption.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-12" data-aos="fade-up">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4 p-lg-5">
+                                <h2 class="h3 fw-bold mb-4">Implementation Process</h2>
+                                <div class="implementation-process">
+                                    <div class="process-step">
+                                        <div class="process-number">1</div>
+                                        <div class="process-content">
+                                            <h4 class="h5 fw-bold">Assessment & Planning</h4>
+                                            <p>Conducted comprehensive audit of existing analytics setup and privacy practices across all websites to identify gaps and requirements.</p>
+                                        </div>
+                                    </div>
+                                    <div class="process-step">
+                                        <div class="process-number">2</div>
+                                        <div class="process-content">
+                                            <h4 class="h5 fw-bold">Framework Development</h4>
+                                            <p>Created standardized GDPR-compliant privacy framework and GA4 implementation templates adaptable to various website configurations.</p>
+                                        </div>
+                                    </div>
+                                    <div class="process-step">
+                                        <div class="process-number">3</div>
+                                        <div class="process-content">
+                                            <h4 class="h5 fw-bold">Stakeholder Alignment</h4>
+                                            <p>Collaborated with legal, IT, and marketing teams to ensure the solution met all compliance requirements while supporting business objectives.</p>
+                                        </div>
+                                    </div>
+                                    <div class="process-step">
+                                        <div class="process-number">4</div>
+                                        <div class="process-content">
+                                            <h4 class="h5 fw-bold">Phased Implementation</h4>
+                                            <p>Executed rollout across global websites in prioritized phases, starting with high-traffic properties and gradually extending to all digital assets.</p>
+                                        </div>
+                                    </div>
+                                    <div class="process-step">
+                                        <div class="process-number">5</div>
+                                        <div class="process-content">
+                                            <h4 class="h5 fw-bold">Validation & Training</h4>
+                                            <p>Conducted thorough testing and validation of implementations, provided comprehensive training to digital teams to ensure ongoing compliance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4 p-lg-5">
+                                <h2 class="h3 fw-bold mb-4">Results & Impact</h2>
+                                <p class="mb-4">The implementation of the GDPR compliance framework and GA4 migration delivered significant results for FrieslandCampina:</p>
+                                <div class="result-item mb-4">
+                                    <div class="d-flex">
+                                        <div class="result-icon">
+                                            <i class="fas fa-globe text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h5 fw-bold">90% Implementation Success</h4>
+                                            <p>Successfully implemented privacy frameworks and GA4 tracking across 90% of all websites within the project timeframe.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-item mb-4">
+                                    <div class="d-flex">
+                                        <div class="result-icon">
+                                            <i class="fas fa-shield-alt text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h5 fw-bold">Enhanced Privacy Compliance</h4>
+                                            <p>Established consistent privacy standards across all digital properties, significantly reducing compliance risks.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-item mb-4">
+                                    <div class="d-flex">
+                                        <div class="result-icon">
+                                            <i class="fas fa-chart-line text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h5 fw-bold">Seamless Analytics Transition</h4>
+                                            <p>Ensured continuity of critical analytics data during the transition from Universal Analytics to GA4.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-item">
+                                    <div class="d-flex">
+                                        <div class="result-icon">
+                                            <i class="fas fa-graduation-cap text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h5 fw-bold">Upskilled Organization</h4>
+                                            <p>Built internal capacity through comprehensive documentation and training, enabling teams to maintain compliance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5" data-aos="fade-left">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4 p-lg-5">
+                                <h2 class="h3 fw-bold mb-4">Technologies Used</h2>
+                                <div class="tech-grid">
+                                    <div class="tech-item">
+                                        <div class="tech-icon">
+                                            <i class="fab fa-google fa-2x text-primary"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold">Google Analytics 4</h4>
+                                    </div>
+                                    <div class="tech-item">
+                                        <div class="tech-icon">
+                                            <i class="fas fa-tags fa-2x text-success"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold">Google Tag Manager</h4>
+                                    </div>
+                                    <div class="tech-item">
+                                        <div class="tech-icon">
+                                            <i class="fas fa-cookie-bite fa-2x text-info"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold">Consent Management</h4>
+                                    </div>
+                                    <div class="tech-item">
+                                        <div class="tech-icon">
+                                            <i class="fas fa-code fa-2x text-danger"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold">JavaScript</h4>
+                                    </div>
+                                    <div class="tech-item">
+                                        <div class="tech-icon">
+                                            <i class="fas fa-file-alt fa-2x text-warning"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold">Documentation</h4>
+                                    </div>
+                                    <div class="tech-item">
+                                        <div class="tech-icon">
+                                            <i class="fas fa-clipboard-check fa-2x text-secondary"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold">Validation Tools</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12" data-aos="fade-up">
+                        <div class="text-center p-5 bg-light rounded-3">
+                            <h2 class="h3 fw-bold mb-4">Need to prepare your organization for GA4 and ensure GDPR compliance?</h2>
+                            <p class="lead mb-4">I can help you implement privacy-first analytics solutions that balance compliance requirements with business insights.</p>
+                            <a href="index.html#contact" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">Get in Touch</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="ga4-migration" class="mb-5">
-            <h2><i class="fas fa-chart-line section-icon"></i>Google Analytics 4 Migration</h2>
-            <p>With Google's transition to the event-based Google Analytics 4 in June 2023, FrieslandCampina needed to
-                upgrade its tracking solutions. I led a project that involved:</p>
-            <ol>
-                <li>Removing Universal Analytics from all domains.</li>
-                <li>Validating and updating the privacy framework, implementing all necessary scripts.</li>
-                <li>Integrating Google Analytics 4 in a privacy-conscious manner, enhancing tracking upon consent.</li>
-                <li>Establishing governance protocols to restrict access to local markets and business units.</li>
-                <li>Configuring Custom Dimensions and Metrics for each new property.</li>
-                <li>Testing implementations for efficacy and accuracy.</li>
-                <li>Liaising with markets to coordinate project timelines and updates.</li>
-                <li>Providing training on the new analytics capabilities and reports.</li>
-            </ol>
-        </section>
-
-        <section id="automation" class="mb-5">
-            <h2><i class="fas fa-robot section-icon"></i>Automation and Efficiency</h2>
-            <p>As part of a small dedicated team, I developed a custom Google Apps Script using Google's Admin API to
-                efficiently create new properties in bulk. This automation drastically reduced projected project
-                completion time, saving months on the schedule, and showcased our ability to deliver successful
-                large-scale implementations strategically and swiftly.</p>
-        </section>
-
-        <section id="Appscript-model" class="mb-5">
-            <div class="implementation-model-container">
-                <img src="images/Appscript code.png" alt="Appscript example" class="img-fluid">
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="h3 text-center fw-bold mb-5">Other Projects</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <a href="akzonobel-project.html" class="text-decoration-none">
+                            <div class="card border-0 shadow-sm other-project-card h-100">
+                                <div class="row g-0">
+                                    <div class="col-4 d-flex align-items-center justify-content-center p-3" style="background-color: #f8f9fa;">
+                                        <img src="images/AkzoNobel_logo.png" alt="AkzoNobel" class="img-fluid" style="max-height: 60px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h3 class="h5 fw-bold">Global Privacy Framework</h3>
+                                            <p class="text-muted mb-0">Implementation across 700+ websites</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="signify-project.html" class="text-decoration-none">
+                            <div class="card border-0 shadow-sm other-project-card h-100">
+                                <div class="row g-0">
+                                    <div class="col-4 d-flex align-items-center justify-content-center p-3" style="background-color: #f8f9fa;">
+                                        <img src="images/signify.png" alt="Signify" class="img-fluid" style="max-height: 60px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h3 class="h5 fw-bold">Custom Adobe Framework</h3>
+                                            <p class="text-muted mb-0">Data collection setup with privacy compliance</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="index.html#projects" class="btn btn-outline-primary px-4 py-2 rounded-pill">
+                        <i class="fas fa-arrow-left me-2"></i>Back to All Projects
+                    </a>
+                </div>
             </div>
-        </section>
-
-        <section id="conclusion" class="mb-5">
-            <h2><i class="fas fa-check-circle section-icon"></i>Conclusion</h2>
-            <p>This project at FrieslandCampina exemplifies my capacity to leverage technical expertise to achieve
-                strategic outcomes. By implementing a robust GDPR compliance framework and successfully migrating to
-                Google Analytics 4, we not only ensured regulatory compliance but also enhanced the company's ability to
-                gather and analyze valuable data across its extensive digital presence.</p>
         </section>
     </main>
 
-    <footer class="bg-dark text-light py-4">
+    <footer class="bg-dark text-light py-5">
         <div class="container text-center">
-            <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" class="footer-logo mb-3">
-            <p>&copy; 2025 Bo Lansdaal. All rights reserved.</p>
+            <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" class="footer-logo">
+            <p class="mb-4">&copy; 2025 Bo Lansdaal. All rights reserved.</p>
+            <div class="d-flex justify-content-center">
+                <a href="index.html" class="text-light mx-2">Home</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="index.html#profile" class="text-light mx-2">About</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="index.html#projects" class="text-light mx-2">Projects</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="index.html#contact" class="text-light mx-2">Contact</a>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+    <button class="scroll-top-btn" id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+            
+            // Make navbar transparent initially and add background on scroll
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.add('scrolled');
+            
+            // Initialize scroll to top
+            initScrollToTop();
+        });
+        
+        // Scroll to top functionality
+        function initScrollToTop() {
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
+            });
+            
+            scrollTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    </script>
+</body>
 </html>

@@ -12,126 +12,34 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-59MSPDPJ');</script>
     <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AkzoNobel Global Analytics & Privacy Framework - Bo Lansdaal</title>
+    <link rel="icon" type="image/png" href="images/Bo logo.png">
+    <title>AkzoNobel Project - Bo Lansdaal</title>
     <meta name="description"
-        content="Bo Lansdaal's role in developing AkzoNobel's global analytics and privacy framework, ensuring GDPR compliance and privacy-first approach across 700+ websites.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        content="Case study of Bo Lansdaal's work with AkzoNobel implementing a global privacy framework and server-side measurement solution across 700+ websites.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/Bo logo.png">
-    <style>
-        .project-banner {
-            background-image: url('images/akzonobel_2.png');
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .project-banner h1 {
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .section-icon {
-            font-size: 2rem;
-            margin-right: 1rem;
-            color: var(--color-primary);
-        }
-
-        .navbar-brand img {
-            height: 40px;
-            width: auto;
-        }
-
-        @media (max-width: 768px) {
-            .navbar-brand img {
-                height: 30px;
-            }
-        }
-
-        .footer-logo {
-            height: 50px;
-            width: auto;
-            margin-bottom: 1rem;
-        }
-
-        .responsibility-card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .responsibility-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .mr-2 {
-            size: 100%;
-        }
-
-        .tech-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: darkblue
-        }
-
-        .outcome-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .outcome-icon {
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            color: var(--color-secondary);
-        }
-
-        .data-model-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-
-        .data-model-container img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .data-model-container:hover img {
-            transform: scale(1.05);
-        }
-
-        @media (min-width: 768px) {
-
-
-            .data-model-container img {
-                object-fit: cover;
-                object-position: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
-
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59MSPDPJ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" height="40">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" height="40" class="me-2">
+                <span>BL</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -143,7 +51,6 @@
                     <li class="nav-item"><a class="nav-link" href="index.html#profile">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#experiences">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#expertise">Expertise</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
                 </ul>
@@ -151,185 +58,663 @@
         </div>
     </nav>
 
-    <header class="project-banner">
-        <h1 class="display-4">AkzoNobel Project: Privacy Framework Implementation</h1>
+    <header class="project-banner"
+        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/akzonobel-banner.jpg') center/cover no-repeat;">
+        <div class="container text-center" data-aos="fade-up">
+            <div class="mb-4">
+                <img src="images/AkzoNobel_logo.png" alt="AkzoNobel" class="img-fluid"
+                    style="max-height: 80px; filter: brightness(0) invert(1);">
+            </div>
+            <h1 class="display-4 text-white fw-bold">Global Privacy Framework Implementation</h1>
+            <div class="mt-4">
+                <span class="badge bg-primary rounded-pill px-3 py-2 me-2">Server-side Tracking</span>
+                <span class="badge bg-secondary rounded-pill px-3 py-2 me-2">GDPR Compliance</span>
+                <span class="badge bg-success rounded-pill px-3 py-2 me-2">700+ Websites</span>
+                <span class="badge bg-info text-dark rounded-pill px-3 py-2">Global Implementation</span>
+            </div>
+        </div>
     </header>
 
-    <main class="container my-5">
-        <section id="role" class="mb-5">
-            <h2><i class="fas fa-user-tie section-icon"></i>My Role at AkzoNobel</h2>
-            <p>As the Product Owner Global Analytics at AkzoNobel, I play a pivotal role in shaping the company's
-                data-driven decision-making processes. My primary responsibility is to develop, implement, and maintain
-                a unified measurement framework that spans our vast network of over 700 domains and 74 brands. This work
-                directly supports AkzoNobel's strategic goal of digital transformation and customer-centric growth.</p>
-        </section>
-        <section id="key-responsibilities" class="mb-5">
-            <h2><i class="fas fa-tasks section-icon"></i>Key Responsibilities</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 responsibility-card">
-                        <div class="card-body">
-                            <h3 class="card-title">Strategic Roadmap Development</h3>
-                            <p class="card-text text-muted">15% time allocation</p>
-                            <ul>
-                                <li>Design and execute a scalable, impactful, and manageable measurement framework</li>
-                                <li>Set measurable targets: Increase data accuracy by 25% and reduce implementation time
-                                    by 40% within the first year</li>
-                            </ul>
+    <main>
+        <section class="py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-8">
+                        <div data-aos="fade-right">
+                            <h2 class="h1 fw-bold mb-4">Project Overview</h2>
+                            <p class="lead">As the Product Owner of Global Analytics at AkzoNobel, I led the development
+                                and implementation of a comprehensive privacy framework and server-side measurement
+                                solution across more than 700 websites worldwide.</p>
+                            <p>This large-scale initiative transformed AkzoNobel's approach to digital analytics,
+                                establishing a future-proof foundation that balances robust measurement capabilities
+                                with stringent privacy requirements and regulatory compliance.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm h-100" data-aos="fade-left">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold mb-4">Project Details</h3>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <div class="d-flex">
+                                            <i class="fas fa-calendar-alt text-primary me-2 mt-1"></i>
+                                            <div>
+                                                <strong>Timeline:</strong><br>
+                                                September 2023 - Present
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="d-flex">
+                                            <i class="fas fa-user-tie text-primary me-2 mt-1"></i>
+                                            <div>
+                                                <strong>Role:</strong><br>
+                                                Product Owner Global Analytics
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="d-flex">
+                                            <i class="fas fa-globe text-primary me-2 mt-1"></i>
+                                            <div>
+                                                <strong>Scope:</strong><br>
+                                                700+ websites across global markets
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex">
+                                            <i class="fas fa-tools text-primary me-2 mt-1"></i>
+                                            <div>
+                                                <strong>Tools:</strong><br>
+                                                Server-side tracking, Google Analytics, Tag Management Systems
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 responsibility-card">
-                        <div class="card-body">
-                            <h3 class="card-title">Stakeholder Alignment and Cross-Functional Collaboration</h3>
-                            <p class="card-text text-muted">30% time allocation</p>
-                            <ul>
-                                <li>Collaborate with B2B and B2C business units, IT, Legal, and Marketing teams</li>
-                                <li>Attend quarterly workshops to identify KPIs, upcoming features, and reporting
-                                    challenges</li>
-                            </ul>
+
+                <div class="row mb-5 gx-4 gy-4">
+                    <div class="col-12 mb-4" data-aos="fade-up">
+                        <h2 class="h2 fw-bold">Key Achievements</h2>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card border-0 shadow-sm h-100 achievement-card">
+                            <div class="card-body text-center p-4">
+                                <div class="achievement-icon-large mb-4">
+                                    <i class="fas fa-server fa-3x text-primary"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Server-side Implementation</h3>
+                                <p>Developed and deployed a custom server-side measurement framework across 700+
+                                    websites</p>
+                                <div class="achievement-stat mt-3">
+                                    <span class="display-6 fw-bold text-primary">700+</span>
+                                    <span class="d-block text-muted">Websites</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card border-0 shadow-sm h-100 achievement-card">
+                            <div class="card-body text-center p-4">
+                                <div class="achievement-icon-large mb-4">
+                                    <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Privacy Compliance</h3>
+                                <p>Ensured GDPR and global privacy regulation compliance across all digital touchpoints
+                                </p>
+                                <div class="achievement-stat mt-3">
+                                    <span class="display-6 fw-bold text-primary">100%</span>
+                                    <span class="d-block text-muted">Compliance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="card border-0 shadow-sm h-100 achievement-card">
+                            <div class="card-body text-center p-4">
+                                <div class="achievement-icon-large mb-4">
+                                    <i class="fas fa-globe fa-3x text-primary"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Global Standardization</h3>
+                                <p>Created a standardized measurement approach across all global markets and brands</p>
+                                <div class="achievement-stat mt-3">
+                                    <span class="display-6 fw-bold text-primary">40+</span>
+                                    <span class="d-block text-muted">Countries</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="card border-0 shadow-sm h-100 achievement-card">
+                            <div class="card-body text-center p-4">
+                                <div class="achievement-icon-large mb-4">
+                                    <i class="fas fa-users fa-3x text-primary"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Stakeholder Alignment</h3>
+                                <p>Collaborated with legal, IT, and marketing teams to ensure end-to-end compliance</p>
+                                <div class="achievement-stat mt-3">
+                                    <span class="display-6 fw-bold text-primary">15+</span>
+                                    <span class="d-block text-muted">Departments</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 responsibility-card">
-                        <div class="card-body">
-                            <h3 class="card-title">Data Governance and Compliance</h3>
-                            <p class="card-text text-muted">25% time allocation</p>
-                            <ul>
-                                <li>Ensure all data collection adheres to AkzoNobel's privacy guidelines and global
-                                    regulations (GDPR, CCPA)</li>
-                                <li>Collaborate with Legal on privacy guidelines and translate these to processes to follow within IT and Marketing</li>
-                                <li>Update Privacy and Cookie policies on changes in technologies or legal requirements</li>
-                            </ul>
+
+                <div class="row mb-5">
+                    <div class="col-12" data-aos="fade-up">
+                        <div class="card border-0 shadow-sm overflow-hidden">
+                            <div class="row g-0">
+                                <div class="col-lg-6 bg-primary p-4 p-lg-5">
+                                    <div class="text-white">
+                                        <h2 class="h3 fw-bold mb-4">The Challenge</h2>
+                                        <p class="mb-4">AkzoNobel faced significant challenges in their global digital
+                                            analytics infrastructure:</p>
+
+                                        <div class="challenge-item mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="challenge-icon">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                </div>
+                                                <h4 class="h5 fw-bold mb-0">Complex Global Footprint</h4>
+                                            </div>
+                                            <p>Managing 700+ websites across 40+ countries with varying regulatory
+                                                requirements and technical implementations.</p>
+                                        </div>
+
+                                        <div class="challenge-item mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="challenge-icon">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                </div>
+                                                <h4 class="h5 fw-bold mb-0">Evolving Privacy Landscape</h4>
+                                            </div>
+                                            <p>Navigating the complex and constantly changing global privacy regulations
+                                                including GDPR, CCPA, and other regional requirements.</p>
+                                        </div>
+
+                                        <div class="challenge-item mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="challenge-icon">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                </div>
+                                                <h4 class="h5 fw-bold mb-0">Client-side Limitations</h4>
+                                            </div>
+                                            <p>Traditional client-side tracking methods faced increasing challenges with
+                                                browser restrictions and privacy controls.</p>
+                                        </div>
+
+                                        <div class="challenge-item">
+                                            <div class="d-flex mb-3">
+                                                <div class="challenge-icon">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                </div>
+                                                <h4 class="h5 fw-bold mb-0">Data Quality & Consistency</h4>
+                                            </div>
+                                            <p>Maintaining consistent data collection and quality across a diverse range
+                                                of websites, platforms, and markets.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 p-4 p-lg-5">
+                                    <h2 class="h3 fw-bold mb-4">The Solution</h2>
+                                    <p class="mb-4">I developed a comprehensive approach to address these challenges:
+                                    </p>
+
+                                    <div class="solution-item mb-4">
+                                        <div class="d-flex mb-3">
+                                            <div class="solution-icon">
+                                                <i class="fas fa-check-circle"></i>
+                                            </div>
+                                            <h4 class="h5 fw-bold mb-0">Custom Server-side Framework</h4>
+                                        </div>
+                                        <p>Designed and implemented a proprietary server-side measurement framework that
+                                            processes data securely and with privacy controls built in.</p>
+                                    </div>
+
+                                    <div class="solution-item mb-4">
+                                        <div class="d-flex mb-3">
+                                            <div class="solution-icon">
+                                                <i class="fas fa-check-circle"></i>
+                                            </div>
+                                            <h4 class="h5 fw-bold mb-0">Global Privacy Standard</h4>
+                                        </div>
+                                        <p>Established a unified privacy standard that meets the requirements of all
+                                            global regulations while providing flexibility for regional variations.</p>
+                                    </div>
+
+                                    <div class="solution-item mb-4">
+                                        <div class="d-flex mb-3">
+                                            <div class="solution-icon">
+                                                <i class="fas fa-check-circle"></i>
+                                            </div>
+                                            <h4 class="h5 fw-bold mb-0">Cross-functional Collaboration</h4>
+                                        </div>
+                                        <p>Worked closely with legal, IT, and marketing teams to ensure alignment and
+                                            compliance throughout the implementation process.</p>
+                                    </div>
+
+                                    <div class="solution-item">
+                                        <div class="d-flex mb-3">
+                                            <div class="solution-icon">
+                                                <i class="fas fa-check-circle"></i>
+                                            </div>
+                                            <h4 class="h5 fw-bold mb-0">Phased Implementation</h4>
+                                        </div>
+                                        <p>Developed a strategic rollout plan to systematically implement the solution
+                                            across all 700+ websites while minimizing disruption.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 responsibility-card">
-                        <div class="card-body">
-                            <h3 class="card-title">First Party Pixel Management</h3>
-                            <p class="card-text text-muted">20% time allocation</p>
-                            <ul>
-                                <li>Oversee server-side data collection setup</li>
-                                <li>Collaborate with Subject Matter Experts to optimize performance and expand
-                                    capabilities</li>
-                            </ul>
+
+                <div class="row mb-5">
+                    <div class="col-12" data-aos="fade-up">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4 p-lg-5">
+                                <h2 class="h3 fw-bold mb-5 text-center">Implementation Process</h2>
+                                <div class="row">
+                                    <div class="col-lg-10 mx-auto">
+                                        <div class="implementation-flow">
+                                            <div class="implementation-step">
+                                                <div class="step-number">1</div>
+                                                <div class="step-content">
+                                                    <h3 class="h5 fw-bold">Assessment & Strategy</h3>
+                                                    <p>Conducted comprehensive audit of existing analytics
+                                                        infrastructure and developed strategic framework</p>
+                                                </div>
+                                            </div>
+                                            <div class="implementation-step">
+                                                <div class="step-number">2</div>
+                                                <div class="step-content">
+                                                    <h3 class="h5 fw-bold">Framework Development</h3>
+                                                    <p>Created custom server-side tracking architecture with built-in
+                                                        privacy controls and compliance features</p>
+                                                </div>
+                                            </div>
+                                            <div class="implementation-step">
+                                                <div class="step-number">3</div>
+                                                <div class="step-content">
+                                                    <h3 class="h5 fw-bold">Stakeholder Alignment</h3>
+                                                    <p>Collaborated with legal, IT, and marketing teams to ensure all
+                                                        requirements were met</p>
+                                                </div>
+                                            </div>
+                                            <div class="implementation-step">
+                                                <div class="step-number">4</div>
+                                                <div class="step-content">
+                                                    <h3 class="h5 fw-bold">Pilot Implementation</h3>
+                                                    <p>Tested framework on select high-profile websites to validate
+                                                        approach and refine methodology</p>
+                                                </div>
+                                            </div>
+                                            <div class="implementation-step">
+                                                <div class="step-number">5</div>
+                                                <div class="step-content">
+                                                    <h3 class="h5 fw-bold">Global Rollout</h3>
+                                                    <p>Systematically implemented solution across all 700+ websites with
+                                                        regional prioritization</p>
+                                                </div>
+                                            </div>
+                                            <div class="implementation-step">
+                                                <div class="step-number">6</div>
+                                                <div class="step-content">
+                                                    <h3 class="h5 fw-bold">Training & Documentation</h3>
+                                                    <p>Created comprehensive documentation and training for global teams
+                                                        to maintain and extend the framework</p>
+                                                </div>
+                                            </div>
+                                            <div class="implementation-step">
+                                                <div class="step-number">7</div>
+                                                <div class="step-content">
+                                                    <h3 class="h5 fw-bold">Continuous Improvement</h3>
+                                                    <p>Established ongoing monitoring and enhancement processes to adapt
+                                                        to changing requirements</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 responsibility-card">
-                        <div class="card-body">
-                            <h3 class="card-title">Developer Support and Agile Implementation</h3>
-                            <p class="card-text text-muted">10% time allocation</p>
-                            <ul>
-                                <li>Create Agile-compliant Epics, stories, and issues</li>
-                                <li>Establish test environments for new functionalities</li>
-                                <li>Provide technical guidance on privacy setups and tool implementations</li>
-                            </ul>
+
+                <div class="row mb-5">
+                    <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-transparent border-0 p-4">
+                                <h2 class="h3 fw-bold mb-0">Technical Architecture</h2>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="architecture-diagram mb-4">
+                                    <div class="architecture-layer">
+                                        <div class="layer-label">Client Side</div>
+                                        <div class="layer-content">
+                                            <div class="component">
+                                                <div class="component-icon">
+                                                    <i class="fas fa-globe"></i>
+                                                </div>
+                                                <div class="component-name">Website</div>
+                                            </div>
+                                            <div class="component">
+                                                <div class="component-icon">
+                                                    <i class="fas fa-code"></i>
+                                                </div>
+                                                <div class="component-name">Minimal JS</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="architecture-connector">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+                                    <div class="architecture-layer">
+                                        <div class="layer-label">Server Side</div>
+                                        <div class="layer-content">
+                                            <div class="component">
+                                                <div class="component-icon">
+                                                    <i class="fas fa-server"></i>
+                                                </div>
+                                                <div class="component-name">Custom Processor</div>
+                                            </div>
+                                            <div class="component">
+                                                <div class="component-icon">
+                                                    <i class="fas fa-shield-alt"></i>
+                                                </div>
+                                                <div class="component-name">Privacy Controls</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="architecture-connector">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+                                    <div class="architecture-layer">
+                                        <div class="layer-label">Analytics Tools</div>
+                                        <div class="layer-content">
+                                            <div class="component">
+                                                <div class="component-icon">
+                                                    <i class="fas fa-chart-pie"></i>
+                                                </div>
+                                                <div class="component-name">Analytics</div>
+                                            </div>
+                                            <div class="component">
+                                                <div class="component-icon">
+                                                    <i class="fas fa-ad"></i>
+                                                </div>
+                                                <div class="component-name">Marketing</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>The server-side architecture minimizes client-side code while maintaining robust data
+                                    collection capabilities and ensuring privacy compliance at every step.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-transparent border-0 p-4">
+                                <h2 class="h3 fw-bold mb-0">Results & Impact</h2>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="results-wrapper">
+                                    <div class="result-metric mb-4">
+                                        <div class="d-flex">
+                                            <div class="result-icon">
+                                                <i class="fas fa-shield-alt"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="h5 fw-bold">Enhanced Privacy Compliance</h4>
+                                                <p>Achieved 100% compliance with global privacy regulations across all
+                                                    digital properties</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result-metric mb-4">
+                                        <div class="d-flex">
+                                            <div class="result-icon">
+                                                <i class="fas fa-chart-line"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="h5 fw-bold">Improved Data Quality</h4>
+                                                <p>30% increase in data reliability and accuracy through server-side
+                                                    processing</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result-metric mb-4">
+                                        <div class="d-flex">
+                                            <div class="result-icon">
+                                                <i class="fas fa-tachometer-alt"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="h5 fw-bold">Enhanced Site Performance</h4>
+                                                <p>25% reduction in client-side scripts, improving page load times</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result-metric mb-4">
+                                        <div class="d-flex">
+                                            <div class="result-icon">
+                                                <i class="fas fa-globe"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="h5 fw-bold">Global Standardization</h4>
+                                                <p>Unified measurement framework across 700+ websites in 40+ countries
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result-metric">
+                                        <div class="d-flex">
+                                            <div class="result-icon">
+                                                <i class="fas fa-users"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="h5 fw-bold">Stakeholder Satisfaction</h4>
+                                                <p>Balanced the needs of marketing, legal, and IT to create a solution
+                                                    that works for all</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-12" data-aos="fade-up">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4 p-lg-5">
+                                <h2 class="h3 fw-bold mb-4 text-center">Technologies Used</h2>
+                                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4">
+                                    <div class="col">
+                                        <div class="tech-box">
+                                            <div class="tech-icon">
+                                                <i class="fas fa-server fa-2x text-primary"></i>
+                                            </div>
+                                            <h4 class="h6 fw-bold">Server-side Tagging</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="tech-box">
+                                            <div class="tech-icon">
+                                                <i class="fab fa-google fa-2x text-danger"></i>
+                                            </div>
+                                            <h4 class="h6 fw-bold">Google Analytics</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="tech-box">
+                                            <div class="tech-icon">
+                                                <i class="fas fa-cookie-bite fa-2x text-info"></i>
+                                            </div>
+                                            <h4 class="h6 fw-bold">Consent Management</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="tech-box">
+                                            <div class="tech-icon">
+                                                <i class="fas fa-tags fa-2x text-success"></i>
+                                            </div>
+                                            <h4 class="h6 fw-bold">Tag Management</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="tech-box">
+                                            <div class="tech-icon">
+                                                <i class="fab fa-js-square fa-2x text-warning"></i>
+                                            </div>
+                                            <h4 class="h6 fw-bold">JavaScript</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="tech-box">
+                                            <div class="tech-icon">
+                                                <i class="fas fa-database fa-2x text-secondary"></i>
+                                            </div>
+                                            <h4 class="h6 fw-bold">Data Layer</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12" data-aos="fade-up">
+                        <div class="text-center p-5 bg-light rounded-3">
+                            <h2 class="h3 fw-bold mb-4">Need a robust privacy-first measurement solution for your
+                                organization?</h2>
+                            <p class="lead mb-4">I can help you implement server-side tracking and privacy frameworks
+                                that balance compliance requirements with analytics needs.</p>
+                            <a href="index.html#contact" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">Get in
+                                Touch</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="data-model" class="mb-5">
-            <div class="data-model-container">
-                <img src="images/First Party Pixel framework.png" alt="First Party Pixel Framework" class="img-fluid">
-            </div>
-        </section>
-
-        <section id="technology-expertise" class="mb-5">
-            <h2><i class="fas fa-laptop-code section-icon"></i>Technology Expertise</h2>
-            <p>My role requires proficiency in a wide range of tools and technologies, including:</p>
-            <div class="row text-center">
-                <div class="col-4 col-md-3 mb-4">
-                    <i class="fab fa-google tech-icon"></i>
-                    <p>Google Analytics</p>
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="h3 text-center fw-bold mb-5">Other Projects</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <a href="signify-project.html" class="text-decoration-none">
+                            <div class="card border-0 shadow-sm other-project-card h-100">
+                                <div class="row g-0">
+                                    <div class="col-4 d-flex align-items-center justify-content-center p-3"
+                                        style="background-color: #f8f9fa;">
+                                        <img src="images/signify-logo3.png" alt="Signify" class="img-fluid"
+                                            style="max-height: 60px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h3 class="h5 fw-bold">Custom Adobe Framework</h3>
+                                            <p class="text-muted mb-0">Data collection setup with privacy compliance</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="frieslandcampina-project.html" class="text-decoration-none">
+                            <div class="card border-0 shadow-sm other-project-card h-100">
+                                <div class="row g-0">
+                                    <div class="col-4 d-flex align-items-center justify-content-center p-3"
+                                        style="background-color: #f8f9fa;">
+                                        <img src="images/friesland-campina-logo.png" alt="FrieslandCampina" class="img-fluid"
+                                            style="max-height: 60px;">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h3 class="h5 fw-bold">GDPR & GA4 Migration</h3>
+                                            <p class="text-muted mb-0">Privacy framework for global websites</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-4 col-md-3 mb-4">
-                    <i class="fas fa-database tech-icon"></i>
-                    <p>BigQuery</p>
-                </div>
-                <div class="col-4 col-md-3 mb-4">
-                    <i class="fas fa-code tech-icon"></i>
-                    <p>SQL</p>
-                </div>
-                <div class="col-4 col-md-3 mb-4">
-                    <i class="fab fa-python tech-icon"></i>
-                    <p>Python</p>
-                </div>
-                <div class="col-4 col-md-3 mb-4">
-                    <i class="fas fa-chart-bar tech-icon"></i>
-                    <p>Looker Studio</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="continuous-improvement" class="mb-5">
-            <h2><i class="fas fa-chart-line section-icon"></i>Continuous Improvement</h2>
-            <div class="card">
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><i class="fas fa-brain mr-2 text-primary"></i> Keep up with the
-                            latest updates within Privacy guidelines. More and more focussed on AI and data processing
-                        </li>
-                        <li class="list-group-item"><i class="fas fa-code mr-2 text-primary"></i> Improve my knowledge
-                            on Data Science and coding</li>
-                        <li class="list-group-item"><i class="fas fa-users mr-2 text-primary"></i> Conduct monthly team
-                            knowledge-sharing sessions on and cross-customer</li>
-                        <li class="list-group-item"><i class="fas fa-handshake mr-2 text-primary"></i> Implement meeting
-                            sessions with tool or Subject Matter Experts on new improvements on data collection and
-                            structuring</li>
-                    </ul>
+                <div class="text-center mt-4">
+                    <a href="index.html#projects" class="btn btn-outline-primary px-4 py-2 rounded-pill">
+                        <i class="fas fa-arrow-left me-2"></i>Back to All Projects
+                    </a>
                 </div>
             </div>
-        </section>
-
-
-        <section id="measurable-outcomes" class="mb-5">
-            <h2><i class="fas fa-bullseye section-icon"></i>Measurable Outcomes</h2>
-            <div class="outcome-item">
-                <i class="fas fa-check-circle outcome-icon"></i>
-                <p>Achieve 80% standardization across all domains within 18 months</p>
-            </div>
-            <div class="outcome-item">
-                <i class="fas fa-check-circle outcome-icon"></i>
-                <p>Reduce data collection discrepancies by 50% in the first year</p>
-            </div>
-            <div class="outcome-item">
-                <i class="fas fa-check-circle outcome-icon"></i>
-                <p>Incorporate e-commerce tracking for all domains that have that functionality in 6 months</p>
-            </div>
-        </section>
-
-        <section id="conclusion" class="mb-5">
-            <h2><i class="fas fa-check-circle section-icon"></i>Conclusion</h2>
-            <p>Through the implementation of this comprehensive Global Analytics and Privacy Framework, I have
-                significantly enhanced AkzoNobel's ability to leverage data while maintaining the highest standards of
-                privacy and compliance. <BR><BR> By leading the privacy-first setup across 700+ sites, contributing to
-                privacy policy creation, and developing data storage and sharing guidelines, I've demonstrated my
-                capacity to balance analytical needs with stringent data protection requirements. This project showcases
-                my expertise in navigating complex privacy landscapes, collaborating across departments, and
-                implementing large-scale, privacy-centric initiatives that align with both regulatory demands and
-                business objectives. <BR><BR> The framework not only ensures GDPR compliance but also positions
-                AkzoNobel as a leader in ethical data practices, supporting informed decision-making while prioritizing
-                user privacy and trust.</p>
         </section>
     </main>
 
-    <footer class="bg-dark text-light py-4">
+    <footer class="bg-dark text-light py-5">
         <div class="container text-center">
-            <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" class="footer-logo mb-3">
-            <p>&copy; 2025 Bo Lansdaal. All rights reserved.</p>
-            <p>header image by © <a href='https://nl.123rf.com/profile_rawpixel'>rawpixel</a></p>
+            <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" class="footer-logo">
+            <p class="mb-4">&copy; 2025 Bo Lansdaal. All rights reserved.</p>
+            <div class="d-flex justify-content-center">
+                <a href="index.html" class="text-light mx-2">Home</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="index.html#profile" class="text-light mx-2">About</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="index.html#projects" class="text-light mx-2">Projects</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="index.html#contact" class="text-light mx-2">Contact</a>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <button class="scroll-top-btn" id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+
+            // Make navbar transparent initially and add background on scroll
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.add('scrolled');
+
+            // Initialize scroll to top
+            initScrollToTop();
+        });
+
+        // Scroll to top functionality
+        function initScrollToTop() {
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
+            });
+
+            scrollTopBtn.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>
