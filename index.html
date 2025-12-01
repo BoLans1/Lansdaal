@@ -18,50 +18,259 @@
     <title>Bo Lansdaal - Technical Web Analytics Consultant</title>
     <meta name="description"
         content="Bo Lansdaal - Technical Web Analytics Consultant and Privacy Specialist. Expertise in digital analytics, data protection, GDPR compliance, and privacy management.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Preload critical assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+        defer></script>
     <script type="text/javascript">
-        (function () {
+        document.addEventListener('DOMContentLoaded', function () {
             emailjs.init("j-GmNdC_RO86e2Gvc");
-        })();
+        });
     </script>
 
     <style>
-        /* Existing styles */
-
-        .hero-logo {
-            max-width: 200px;
-            height: auto;
-            margin-bottom: 2rem;
+        /* Custom styles */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 180px 0 120px;
+            background: linear-gradient(120deg, var(--color-primary) 0%, var(--color-secondary) 100%);
         }
 
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('images/pattern.svg') repeat;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-logo {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+            transition: transform 0.5s ease;
+        }
+
+        .hero-logo:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .hero h1 {font: 1em sans-serif;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Timeline animation */
+        .timeline-item {
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Card hover effects */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card .btn {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .project-card .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Contact section */
+        #contact {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('images/pattern.svg') repeat;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .contact-form-container {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-form-container:hover {
+            transform: translateY(-5px);
+        }
+
+        #contact .social-icons {
+            margin-top: 30px;
+        }
+
+        #contact .social-icons .btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+        }
+
+        #contact .social-icons .btn:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Footer enhancement */
+        footer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('images/pattern.svg') repeat;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            height: 60px;
+            width: auto;
+            margin-bottom: 1.5rem;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s ease;
+        }
+
+        .footer-logo:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 80px;
+            }
+
             .hero-logo {
-                max-width: 150px;
+                max-width: 140px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-form-container {
+                padding: 25px;
             }
         }
 
-
-        .footer-logo {
+        /* Scroll to top button */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
             height: 50px;
-            width: auto;
-            margin-bottom: 1rem;
+            border-radius: 50%;
+            background-color: var(--color-secondary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .scroll-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-top-btn:hover {
+            background-color: var(--color-primary);
+            transform: translateY(-5px);
         }
     </style>
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59MSPDPJ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" height="40">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" height="40" class="me-2">
+                <span>BL</span>
             </a>
-            <a class="navbar-brand" href="#home">BL</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -82,249 +291,411 @@
     </nav>
 
     <header id="home" class="hero">
-        <div class="container text-center">
-            <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" class="hero-logo mb-4">
-            <h1 class="display-1 mb-4">Bo Lansdaal</h1>
-            <p class="lead mb-5">Technical Analytics Consultant | Privacy Specialist |  Product Owner Global Analytics 
+        <div class="container text-center hero-content">
+            <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" class="hero-logo">
+            <h1 class="display-3 fw-bold text-white mb-4 animate__animated animate__fadeInUp">Bo Lansdaal</h1>
+            <p class="lead text-white mb-5 animate__animated animate__fadeInUp animate__delay-1s">
+                Technical Web Analytics Consultant & Privacy Specialist
             </p>
-            <a href="#projects" class="btn btn-lg btn-primary">View My Work</a>
+            <div class="animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="#contact" class="btn btn-lg btn-light me-3 px-4 py-3 rounded-pill">Get in Touch</a>
+                <a href="#profile" class="btn btn-lg btn-outline-light px-4 py-3 rounded-pill">Learn More</a>
+            </div>
         </div>
     </header>
+
     <main>
-        <section id="profile" class="bg-light">
+        <section id="profile" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5">About Me</h2>
+                <div class="text-center mb-5">
+                    <h2 class="display-4 fw-bold position-relative d-inline-block">
+                        About Me
+                        <span class="position-absolute w-100" style="height: 4px; background: linear-gradient(to right, var(--color-primary), var(--color-secondary)); bottom: -10px; left: 0; border-radius: 2px;"></span>
+                    </h2>
+                </div>
+                
                 <div class="row align-items-center">
-                    <div class="col-md-4 mb-4 mb-md-0">
-                        <img src="images/bo-lansdaal.png" alt="Bo Lansdaal" class="img-fluid rounded-circle">
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <div class="position-relative profile-image-container text-center text-lg-start">
+                            <!-- Main circular image with proper sizing and shadow -->
+                            <div class="position-relative d-inline-block">
+                                <img src="images/bo-lansdaal.png" alt="Bo Lansdaal" 
+                                    class="img-fluid rounded-circle shadow-lg profile-image"
+                                    style="width: 300px; height: 300px; object-fit: cover; border: 5px solid white; z-index: 2; position: relative;">
+                                
+                                <!-- Decorative elements -->
+                                <div class="position-absolute top-50 start-50 translate-middle-x rounded-circle" 
+                                    style="width: 320px; height: 320px; border: 2px dashed var(--color-primary); opacity: 0.4; z-index: 1;"></div>
+                                    
+                                <div class="position-absolute" 
+                                    style="bottom: -25px; right: -25px; background: var(--color-primary); width: 100px; height: 100px; border-radius: 20px; transform: rotate(10deg); opacity: 0.2; z-index: 1;"></div>
+                                    
+                                <div class="position-absolute" 
+                                    style="top: -20px; left: -20px; background: var(--color-secondary); width: 80px; height: 80px; border-radius: 15px; transform: rotate(-15deg); opacity: 0.2; z-index: 1;"></div>
+                            </div>
+                            
+                            <!-- Expertise badges -->
+                            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mt-4">
+                                <span class="badge bg-primary rounded-pill px-3 py-2">Web Analytics</span>
+                                <span class="badge bg-secondary rounded-pill px-3 py-2">Privacy</span>
+                                <span class="badge bg-info text-dark rounded-pill px-3 py-2">GDPR</span>
+                                <span class="badge bg-success rounded-pill px-3 py-2">Data Strategy</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                        <p>Born in 1990, I'm a Technical Web Analytics Consultant and Privacy Specialist based in the
-                            Netherlands. With a strong background in digital analytics and a growing expertise in
-                            privacy and data protection, I excel at bridging the gap between technology and regulatory
-                            compliance. My experience spans from implementing global measurement frameworks to ensuring
-                            GDPR compliance across multiple digital platforms.<BR><BR>
-
-                            One of my key strengths is explaining complex subjects in tech and privacy as simply as
-                            possible, making me an effective communicator in cross-functional teams. I'm particularly
-                            passionate about the intersection of data analytics and privacy, always striving to find the
-                            balance between valuable insights and robust data protection.<BR><BR>
-
-                            With my background in Communications, Marketing, and Journalism, combined with my technical
-                            expertise, I bring a unique perspective to privacy management in the digital landscape. I'm
-                            committed to staying at the forefront of privacy regulations and information security
-                            standards, ensuring that the organizations I work with not only comply with current laws but
-                            are also prepared for future developments in the field.</p>
+                    
+                    <div class="col-lg-7">
+                        <div class="about-content ps-lg-4">
+                            <p class="lead mb-4 text-primary fw-bold">Technical Web Analytics Consultant & Privacy Specialist</p>
+                            
+                            <p class="mb-4">As a specialist in this field, I bring a unique blend of expertise in digital analytics, privacy management, and data protection. My focus is on creating solutions that balance powerful analytics capabilities with strict privacy requirements.</p>
+                            
+                            <p class="mb-4">With extensive experience working with global brands like <span class="fw-medium">AkzoNobel</span>, <span class="fw-medium">Signify</span>, and <span class="fw-medium">FrieslandCampina</span>, I specialize in creating robust measurement frameworks that enable organizations to leverage data effectively while maintaining the highest standards of privacy compliance.</p>
+                            
+                            <p class="mb-4">I'm committed to staying at the forefront of privacy regulations and information security standards, ensuring that the organizations I work with not only comply with current laws but are also prepared for future developments in the field.</p>
+                            
+                            <div class="key-strengths mb-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="me-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10" style="width: 36px; height: 36px;">
+                                        <i class="fas fa-shield-alt text-primary"></i>
+                                    </div>
+                                    <div>Privacy-first approach to data collection and analytics</div>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="me-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10" style="width: 36px; height: 36px;">
+                                        <i class="fas fa-chart-line text-primary"></i>
+                                    </div>
+                                    <div>Expert in designing compliant measurement frameworks</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10" style="width: 36px; height: 36px;">
+                                        <i class="fas fa-server text-primary"></i>
+                                    </div>
+                                    <div>Server-side tracking implementation specialist</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4 d-flex flex-wrap gap-3">
+                                <a href="#contact" class="btn btn-primary px-4 py-2 rounded-pill">
+                                    <i class="fas fa-envelope me-2"></i>Contact Me
+                                </a>
+                                <a href="#experiences" class="btn btn-outline-secondary px-4 py-2 rounded-pill">
+                                    <i class="fas fa-briefcase me-2"></i>View Experience
+                                </a>
+                                <a href="cv.pdf" class="btn btn-outline-dark px-4 py-2 rounded-pill" target="_blank">
+                                    <i class="fas fa-file-alt me-2"></i>Download CV
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experiences">
+        <section id="experiences" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-5">Work Experience</h2>
+                <h2 class="text-center display-4 fw-bold mb-5">Work Experience</h2>
                 <div class="timeline">
+                    <!-- AkzoNobel Product Owner Experience -->
                     <div class="timeline-item fade-in-up">
-                        <h3>Product Owner Global Analytics</h3>
-                        <h4>AkzoNobel</h4>
-                        <p class="text-muted">September 2024 - Present</p>
-                        <ul>
-                            <li>Responsible for maintaining and developing the global measurement framework for all
-                                digital touchpoints of AkzoNobel.</li>
-                            <li>Collaborate with legal and IT teams to ensure all data collection and analytics practices comply with GDPR and other relevant privacy regulations.</li>
-                            <li>Manage and further develop the custom server-side analytics implementation for all
-                                global touchpoints.</li>
-                            <li>Implemented the custom server-side measurement framework on 700+ websites.</li>
-                            <li>Support global markets with data and insight reports on their sites and apps.</li>
-                        </ul>
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="images/project-akzonobel3.png" alt="AkzoNobel" class="me-3"
+                                        style="height: 40px; width: auto;">
+                                    <div>
+                                        <h3 class="mb-0">Product Owner Global Analytics</h3>
+                                        <h4 class="text-muted">AkzoNobel</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted mb-3">September 2024 - Present</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Responsible
+                                        for maintaining and developing the global measurement framework for all digital
+                                        touchpoints of AkzoNobel.</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Collaborate
+                                        with legal and IT teams to ensure all data collection and analytics practices
+                                        comply with GDPR and other relevant privacy regulations.</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Manage and
+                                        further develop the custom server-side analytics implementation for all global
+                                        touchpoints.</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Implemented
+                                        the custom server-side measurement framework on 700+ websites.</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Support
+                                        global markets with data and insight reports on their sites and apps.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Signify Experience -->
                     <div class="timeline-item fade-in-up">
-                        <h3>Global Data Engineer</h3>
-                        <h4>Signify</h4>
-                        <p class="text-muted">August 2022 - Present</p>
-                        <ul>
-                            <li>Manage and implement global data collection setups with custom Adobe setup framework.
-                            </li>
-                            <li>Responsible for new data collection setup for external vendors like Facebook and
-                                Pinterest.</li>
-                            <li>Validate data compliancy and advice stakeholders within Legal and IT on issues between
-                                data privacy and usability.</li>
-                            <li>Implemented custom script that defines and collects referring marketing channel.</li>
-                        </ul>
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="images/signify-logo3.png" alt="Signify" class="me-3"
+                                        style="height: 40px; width: auto;">
+                                    <div>
+                                        <h3 class="mb-0">Global Data Engineer</h3>
+                                        <h4 class="text-muted">Signify</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted mb-3">August 2022 - Present</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Manage and
+                                        implement global data collection setups with custom Adobe setup framework.</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Responsible
+                                        for new data collection setup for external vendors like Facebook and Pinterest.
+                                    </li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Validate data
+                                        compliancy and advice stakeholders within Legal and IT on issues between data
+                                        privacy and usability.</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Implemented
+                                        custom script that defines and collects referring marketing channel.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- AkzoNobel Teamlead Experience -->
                     <div class="timeline-item fade-in-up">
-                        <h3>Teamlead Digital Activation Support - Analytics & Compliance</h3>
-                        <h4>AkzoNobel</h4>
-                        <p class="text-muted">March 2023 - October 2024</p>
-                        <ul>
-                            <li>Managed a team of 3 subject matter experts for the AkzoNobel Global Analytics and
-                                Compliance team.</li>
-                            <li>Responsible for training and mentoring new employees on digital analytics, compliance
-                                rules and web + app debugging.</li>
-                            <li>Giving advice to stakeholders on new ways to improve efficiency on current digital
-                                activation services for markets.</li>
-                            <li>Creating new services to accommodate new needs from markets on their digital marketing
-                                efforts.</li>
-                        </ul>
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="images/project-akzonobel3.png" alt="AkzoNobel" class="me-3"
+                                        style="height: 40px; width: auto;">
+                                    <div>
+                                        <h3 class="mb-0">Teamlead Digital Activation Support - Analytics & Compliance
+                                        </h3>
+                                        <h4 class="text-muted">AkzoNobel</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted mb-3">March 2023 - October 2024</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Managed a
+                                        team of 3 subject matter experts for the AkzoNobel Global Analytics and
+                                        Compliance team.</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Responsible
+                                        for training and mentoring new employees on digital analytics, compliance rules
+                                        and web + app debugging.</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Giving advice
+                                        to stakeholders on new ways to improve efficiency on current digital activation
+                                        services for markets.</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Creating new
+                                        services to accommodate new needs from markets on their digital marketing
+                                        efforts.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- FrieslandCampina Experience -->
                     <div class="timeline-item fade-in-up">
-                        <h3>Technical Web Analytics Consultant</h3>
-                        <h4>Friesland Campina</h4>
-                        <p class="text-muted">April 2022 - February 2023</p>
-                        <ul>
-                            <li>Helped FrieslandCampina Global get all their websites GDPR compliant and prepared them
-                                for the change to GA4 by implementing a global default setup.</li>
-                            <li>Achieved 90% of all websites within FrieslandCampina outfitted with a privacy framework
-                                and GA4 installed.</li>
-                        </ul>
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="images/friesland-campina-logo3.png" alt="FrieslandCampina" class="me-3"
+                                        style="height: 40px; width: auto;">
+                                    <div>
+                                        <h3 class="mb-0">Technical Web Analytics Consultant</h3>
+                                        <h4 class="text-muted">FrieslandCampina</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted mb-3">April 2022 - February 2023</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Helped
+                                        FrieslandCampina Global get all their websites GDPR compliant and prepared them
+                                        for the change to GA4 by implementing a global default setup.</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Achieved 90%
+                                        of all websites within FrieslandCampina outfitted with a privacy framework and
+                                        GA4 installed.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Blox & BTC Direct Experience -->
                     <div class="timeline-item fade-in-up">
-                        <h3>Performance Marketeer</h3>
-                        <h4>Blox & BTC Direct</h4>
-                        <p class="text-muted">April 2021 - March 2022</p>
-                        <ul>
-                            <li>Responsible for creating and running campaigns, managing media- and advertising
-                                agencies.</li>
-                            <li>Measured and reported on website and app traffic, behavior, and performance to all
-                                stakeholders.</li>
-                            <li>Achieved a 110% increase in new users through 5 campaigns during the crypto summer of
-                                2022.</li>
-                        </ul>
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="images/blox logo.png" alt="Blox & BTC Direct" class="me-3"
+                                        style="height: 100px; width: auto;">
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">Performance Marketeer</h3>
+                                    <h4 class="text-muted">Blox & BTC Direct</h4>
+                                </div>
+                            <p class="text-muted mb-3">April 2021 - March 2022</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Responsible
+                                    for creating and running campaigns, managing media- and advertising agencies.
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Measured and
+                                    reported on website and app traffic, behavior, and performance to all
+                                    stakeholders.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Achieved a
+                                    110% increase in new users through 5 campaigns during the crypto summer of 2022.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+            </div>
         </section>
 
-        <section id="skills" class="bg-light">
+
+
+        <section id="skills" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5">Skills</h2>
+                <h2 class="text-center display-4 fw-bold mb-5">Professional Skills</h2>
                 <div class="row">
-                    <div class="col-md-6">
-                        <h3>Technical Skills</h3>
-                        <div class="skill-item">
-                            <h4>Tag Management</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Project Management</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Privacy Management</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95"
-                                    aria-valuemin="0" aria-valuemax="90"></div>
-                            </div>
-                        </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h3 class="card-title mb-4">Technical Skills</h3>
 
-                        <div class="skill-item">
-                            <h4>Data Protection</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="90"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Risk Analysis</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="85"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="skill-item mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">Web Analytics</h5>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 95%;"
+                                            aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
 
-                            </div>
-                            <div class="skill-item">
-                                <h4>Policy Development</h4>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80"
-                                        aria-valuemin="0" aria-valuemax="70"></div>
+                                <div class="skill-item mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">Tag Management</h5>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 90%;"
+                                            aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">Data Architecture</h5>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%;"
+                                            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">JavaScript</h5>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 80%;"
+                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <h4>Web Development</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <h4>App Tracking</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Digital Analytics</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Database Management</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
                     </div>
-                    <div class="col-md-6">
-                        <h3>Tools & Languages</h3>
-                        <div class="row">
-                            <div class="col-6 col-sm-3 mb-4">
-                                <div class="tool-item">
-                                    <img src="images/icons/google icon.png" alt="Google Suite" class="tool-icon">
-                                    <h5>Google Suite</h5>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h3 class="card-title mb-4">Professional Skills</h3>
+
+                                <div class="skill-item mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">Privacy Management</h5>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 95%;"
+                                            aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">Project Management</h5>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 90%;"
+                                            aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">Data Protection</h5>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 90%;"
+                                            aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">Risk Analysis</h5>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%;"
+                                            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-6 col-sm-3 mb-4">
-                                <div class="tool-item">
-                                    <img src="images/icons/Adobe icon.png" alt="Adobe Suite" class="tool-icon">
-                                    <h5>Adobe Suite</h5>
-                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <h3 class="text-center mb-4">Tools & Technologies</h3>
+                    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4">
+                        <div class="col">
+                            <div class="tool-item">
+                                <i class="fab fa-google fa-3x mb-3 text-primary"></i>
+                                <h5>Google Analytics</h5>
                             </div>
-                            <div class="col-6 col-sm-3 mb-4">
-                                <div class="tool-item">
-                                    <img src="images/icons/OneTrust Icon.png" alt="OneTrust" class="tool-icon">
-                                    <h5>OneTrust</h5>
-                                </div>
+                        </div>
+                        <div class="col">
+                            <div class="tool-item">
+                                <svg class="mb-3 text-danger" style="width: 48px; height: 48px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <!-- Adobe icon path -->
+                                    <path fill="currentColor" d="M323.1 106h-190C100.8 106 64 133.6 64 176.3v159.3C64 378.6 100.8 406 133.1 406h190c32.3 0 69.1-27.4 69.1-70.3V176.3c0-42.7-36.8-70.3-69.1-70.3zM213.4 337l-30.8-84.3 30.6-89.5 30.6 89.5-30.4 84.3zm-6.7-171l-65 .2 36.5 98.6L104 337h36.6l61.9-171zm145.7 171h-36.2l-54.7-169.9 65.2-.2L352.4 337z"/>
+                                </svg>
+                                <h5>Adobe Analytics</h5>
                             </div>
-                            <div class="col-6 col-sm-3 mb-4">
-                                <div class="tool-item">
-                                    <img src="images/icons/Trustarc icon.png" alt="TrustArc" class="tool-icon">
-                                    <h5>TrustArc</h5>
-                                </div>
+                        </div>
+                        <div class="col">
+                            <div class="tool-item">
+                                <i class="fas fa-tags fa-3x mb-3 text-success"></i>
+                                <h5>Google Tag Manager</h5>
                             </div>
-                            <div class="col-6 col-sm-3 mb-4">
-                                <div class="tool-item">
-                                    <img src="images/icons/appscript icon.png" alt="Appscript" class="tool-icon">
-                                    <h5>Appscript</h5>
-                                </div>
+                        </div>
+                        <div class="col">
+                            <div class="tool-item">
+                                <i class="fas fa-shield-alt fa-3x mb-3 text-info"></i>
+                                <h5>GDPR Tools</h5>
                             </div>
-                            <div class="col-6 col-sm-3 mb-4">
-                                <div class="tool-item">
-                                    <img src="images/icons/Power query icon.png" alt="PowerQuery" class="tool-icon">
-                                    <h5>PowerQuery</h5>
-                                </div>
+                        </div>
+                        <div class="col">
+                            <div class="tool-item">
+                                <i class="fab fa-js-square fa-3x mb-3 text-warning"></i>
+                                <h5>JavaScript</h5>
                             </div>
-                            <div class="col-6 col-sm-3 mb-4">
-                                <div class="tool-item">
-                                    <img src="images/icons/JavaScript icon.png" alt="JavaScript" class="tool-icon">
-                                    <h5>JavaScript</h5>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-3 mb-4">
-                                <div class="tool-item">
-                                    <img src="images/icons/Python icon.png" alt="Python" class="tool-icon">
-                                    <h5>Python</h5>
-                                </div>
+                        </div>
+                        <div class="col">
+                            <div class="tool-item">
+                                <i class="fas fa-server fa-3x mb-3 text-secondary"></i>
+                                <h5>Server-side Tracking</h5>
                             </div>
                         </div>
                     </div>
@@ -332,88 +703,136 @@
             </div>
         </section>
 
-        <section id="certifications" class="bg-white">
+        <section id="certifications" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-5">Recent Certifications</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <h3 class="card-title">CIPT</h3>
-                                <p class="card-text">Certified Information Privacy Technologist Course Completed
-                                </p>
+                <h2 class="text-center display-4 fw-bold mb-5">Certifications</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center mx-auto mb-4"
+                                    style="width: 80px; height: 80px;">
+                                    <i class="fas fa-certificate fa-2x text-white"></i>
+                                </div>
+                                <h3 class="card-title h4">CIPT Certification</h3>
+                                <p class="card-text">Certified Information Privacy Technologist by IAPP</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <h3 class="card-title">Server Side Tag Specialist</h3>
-                                <p class="card-text">WIth Google Tag Manager</p>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-chart-bar fa-2x text-white"></i>
+                                </div>
+                                <h3 class="card-title h4">Google Analytics 4</h3>
+                                <p class="card-text">Google Analytics Individual Qualification</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <h3 class="card-title">Python Mastery</h3>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="rounded-circle bg-success d-flex align-items-center justify-content-center mx-auto mb-4"
+                                    style="width: 80px; height: 80px;">
+                                    <i class="fab fa-python fa-2x text-white"></i>
+                                </div>
+                                <h3 class="card-title h4">Python Mastery</h3>
                                 <p class="card-text">Certificate of Completion by Code With Mosh</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Add more certifications as needed -->
                 </div>
             </div>
         </section>
 
-        <section id="expertise">
+        <section id="expertise" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5">Areas of Expertise</h2>
-                <div class="row">
-                
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="card-title">Privacy & Data Protection</h3>
+                <h2 class="text-center display-4 fw-bold mb-5">Areas of Expertise</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">f
+                                    <div class="rounded-circle bg-primary p-3 me-3">
+                                        <i class="fas fa-shield-alt fa-2x text-white"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Privacy & Data Protection</h3>
+                                </div>
                                 <p class="card-text">Expertise in privacy management, GDPR compliance, and data
                                     protection. Certified Information Privacy Technologist (CIPT) practitioner with
                                     experience in risk analysis and policy development.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="card-title">Measurement Framework & Data Collection</h3>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="rounded-circle bg-secondary p-3 me-3">
+                                        <i class="fas fa-chart-line fa-2x text-white"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Measurement Framework</h3>
+                                </div>
                                 <p class="card-text">Proficient in creating robust measurement frameworks and
-                                    implementing effective data collection strategies.</p>
+                                    implementing effective data collection strategies for complex organizations.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="card-title">Advanced analytics & Data security/Compliance</h3>
-                                <p class="card-text">Experience in advanced analytics and Certified Information Privacy
-                                    Technologist (CIPT) practicioner.</p>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="rounded-circle bg-success p-3 me-3">
+                                        <i class="fas fa-tachometer-alt fa-2x text-white"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Advanced Analytics</h3>
+                                </div>
+                                <p class="card-text">Experience in advanced analytics techniques and data
+                                    security/compliance solutions that balance business needs with privacy requirements.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="card-title">Project Management</h3>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="rounded-circle bg-info p-3 me-3">
+                                        <i class="fas fa-tasks fa-2x text-white"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Project Management</h3>
+                                </div>
                                 <p class="card-text">Proven track record in managing and delivering successful projects
-                                    across various domains.</p>
+                                    across various domains with a focus on stakeholder satisfaction.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="card-title">E-commerce & Digital Sales</h3>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="rounded-circle bg-warning p-3 me-3">
+                                        <i class="fas fa-shopping-cart fa-2x text-white"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">E-commerce & Digital Sales</h3>
+                                </div>
                                 <p class="card-text">Expertise in optimizing online sales strategies and improving
-                                    digital customer experiences.</p>
+                                    digital customer experiences through data-driven insights.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="rounded-circle bg-danger p-3 me-3">
+                                        <i class="fas fa-server fa-2x text-white"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Server-side Implementation</h3>
+                                </div>
+                                <p class="card-text">Specialized in developing and implementing server-side tracking
+                                    solutions that enhance privacy while maintaining data quality.</p>
                             </div>
                         </div>
                     </div>
@@ -421,41 +840,71 @@
             </div>
         </section>
 
-        <section id="projects" class="bg-light">
+        <section id="projects" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-5">Recent Projects</h2>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="project-card">
-                            <img src="images/project-akzonobel3.png" alt="Privacy Framework Implementation"
-                                class="project-image">
-                            <div class="project-content">
-                                <h3>Privacy Framework Implementation</h3>
-                                <p>Developed and implemented a comprehensive privacy framework across multiple
-                                    organizations, ensuring GDPR compliance and robust data protection measures.</p>
-                                <a href="akzonobel-project.html" class="btn btn-primary">Learn More</a>
+                <h2 class="text-center display-4 fw-bold mb-5">Recent Projects</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="project-card h-100">
+                            <div class="position-relative overflow-hidden" style="height: 200px;">
+                                <img src="images/project-akzonobel3.png" alt="AkzoNobel Project" class="w-100 h-100"
+                                    style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                    style="background: rgba(0,0,0,0.4);">
+                                    <img src="images/AkzoNobel_logo.png" alt="AkzoNobel"
+                                        style="height: 60px; filter: brightness(0) invert(1);">
+                                </div>
+                            </div>
+                            <div class="project-content p-4">
+                                <h3 class="h4 mb-3">Global Privacy Framework Implementation</h3>
+                                <p class="mb-4">Developed and implemented a comprehensive privacy framework across 700+
+                                    websites, ensuring GDPR compliance and robust data protection measures.</p>
+                                <div class="d-flex">
+                                    <a href="akzonobel-project.html" class="btn btn-primary px-4">View Details</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="project-card">
-                            <img src="images/friesland-campina-logo3.png" alt="FrieslandCampina" class="project-image">
-                            <div class="project-content">
-                                <h3>GDPR Compliance & GA4 Migration</h3>
-                                <p>Led the implementation of privacy frameworks and GA4 setup for 90% of
+                    <div class="col">
+                        <div class="project-card h-100">
+                            <div class="position-relative overflow-hidden" style="height: 200px;">
+                                <img src="images/friesland-campina-logo3.png" alt="FrieslandCampina Project"
+                                    class="w-100 h-100" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                    style="background: rgba(0,0,0,0.4);">
+                                    <img src="images/friesland-campina-logo.png" alt="FrieslandCampina"
+                                        style="height: 150px; filter: brightness(0) invert(1);">
+                                </div>
+                            </div>
+                            <div class="project-content p-4">
+                                <h3 class="h4 mb-3">GDPR Compliance & GA4 Migration</h3>
+                                <p class="mb-4">Led the implementation of privacy frameworks and GA4 setup for 90% of
                                     FrieslandCampina's websites, ensuring GDPR compliance and data continuity.</p>
-                                <a href="frieslandcampina-project.html" class="btn btn-primary">Learn More</a>
+                                <div class="d-flex">
+                                    <a href="frieslandcampina-project.html" class="btn btn-primary px-4">View
+                                        Details</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="project-card">
-                            <img src="images/signify-logo3.png" alt="Signify" class="project-image">
-                            <div class="project-content">
-                                <h3>Custom Adobe Data Collection</h3>
-                                <p>Developed and implemented a custom data collection setup for external vendors and a
-                                    script to define and collect referring marketing channels for Signify.</p>
-                                <a href="signify-project.html" class="btn btn-primary">Learn More</a>
+                    <div class="col">
+                        <div class="project-card h-100">
+                            <div class="position-relative overflow-hidden" style="height: 200px;">
+                                <img src="images/signify-logo3.png" alt="Signify Project" class="w-100 h-100"
+                                    style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                                    style="background: rgba(0,0,0,0.4);">
+                                    <img src="images/signify.png" alt="Signify"
+                                        style="height: 60px; filter: brightness(0) invert(1);">
+                                </div>
+                            </div>
+                            <div class="project-content p-4">
+                                <h3 class="h4 mb-3">Custom Adobe Data Collection</h3>
+                                <p class="mb-4">Developed and implemented a custom data collection setup for Adobe
+                                    Analytics and external vendors, ensuring data quality and privacy compliance.</p>
+                                <div class="d-flex">
+                                    <a href="signify-project.html" class="btn btn-primary px-4">View Details</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -463,46 +912,82 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5">Get in Touch</h2>
+                <h2 class="text-center display-4 fw-bold mb-5">Get in Touch</h2>
                 <div class="row">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <form id="contact-form">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" id="message" rows="5" placeholder="Your Message"
-                                    required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="contact-form-container">
+                            <h3 class="mb-4">Send Me a Message</h3>
+                            <form id="contact-form" class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control form-control-lg" id="name" name="name"
+                                        required>
+                                    <div class="invalid-feedback">Please provide your name.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control form-control-lg" id="email" name="email"
+                                        required>
+                                    <div class="invalid-feedback">Please provide a valid email.</div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea class="form-control form-control-lg" id="message" name="message" rows="5"
+                                        required></textarea>
+                                    <div class="invalid-feedback">Please enter your message.</div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                                <div id="form-status" class="mt-3 text-center"></div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <h4>Connect with me:</h4>
-                        <ul class="list-inline social-icons">
-                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/bo-lansdaal/"
-                                    target="_blank" class="btn btn-outline-dark"><i class="fab fa-linkedin"></i></a>
-                            </li>
-                        </ul>
+                    <div class="col-lg-6">
+                        <div class="contact-info h-100 d-flex flex-column justify-content-between">
+
+
+                            <div class="social-icons text-center mt-5">
+                                <h4 class="mb-4">Connect with Me</h4>
+                                <a href="https://www.linkedin.com/in/bo-lansdaal/" target="_blank"
+                                    class="btn btn-primary rounded-circle me-2">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                </a>
+                                <a href="https://github.com/BoLans1/" target="_blank" class="btn btn-dark rounded-circle me-2">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-dark text-light py-4">
-        <div class="container text-center">
-            <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" class="footer-logo mb-3">
-            <p>&copy; 2025 Bo Lansdaal. All rights reserved.</p>
+    <footer class="bg-dark text-light py-5">
+        <div class="container text-center footer-content">
+            <img src="images/Bo logo.png" alt="Bo Lansdaal Logo" class="footer-logo">
+            <p class="mb-4">&copy; 2025 Bo Lansdaal. All rights reserved.</p>
+            <div class="d-flex justify-content-center">
+                <a href="#home" class="text-light mx-2">Home</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="#profile" class="text-light mx-2">About</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="#projects" class="text-light mx-2">Projects</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="#contact" class="text-light mx-2">Contact</a>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <button class="scroll-top-btn" id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/main.js"></script>
 </body>
 
