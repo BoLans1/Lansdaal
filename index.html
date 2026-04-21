@@ -12,12 +12,43 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-59MSPDPJ');</script>
     <!-- End Google Tag Manager -->
+    <script>
+        !function (t, e) { var o, n, p, r; e.__SV || (window.posthog && window.posthog.__loaded) || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "Ir Sr init jr $r Ci qr Hr Dr capture calculateEventProperties Wr register register_once register_for_session unregister unregister_for_session Qr getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync tn identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Jr Yr createPersonProfile setInternalOrTestUser Kr Pr nn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing zr debug ki Xr getPageViewId captureTraceFeedback captureTraceMetric Mr".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+        posthog.init('phc_nUum8juznFZaY82XuBXUic77qphDts6J5eoM6fcUnopp', {
+            api_host: 'https://eu.i.posthog.com',
+            defaults: '2026-01-30',
+            person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+        })
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/Bo logo.png">
     <title>Bo Lansdaal - Technical Web Analytics Consultant</title>
     <meta name="description"
         content="Bo Lansdaal - Technical Web Analytics Consultant and Privacy Specialist. Expertise in digital analytics, data protection, GDPR compliance, and privacy management.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bolansdaal.com/">
+    <meta property="og:title" content="Bo Lansdaal - Technical Web Analytics Consultant & Privacy Specialist">
+    <meta property="og:description"
+        content="Expert in digital analytics, GDPR compliance, and privacy management. Specialized in server-side tracking and data protection for global brands.">
+    <meta property="og:image" content="https://bolansdaal.com/images/bo-lansdaal.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bolansdaal.com/">
+    <meta property="twitter:title" content="Bo Lansdaal - Technical Web Analytics Consultant & Privacy Specialist">
+    <meta property="twitter:description"
+        content="Expert in digital analytics, GDPR compliance, and privacy management. Specialized in server-side tracking and data protection for global brands.">
+    <meta property="twitter:image" content="https://bolansdaal.com/images/bo-lansdaal.png">
+
+    <!-- Additional SEO -->
+    <meta name="author" content="Bo Lansdaal">
+    <meta name="keywords"
+        content="web analytics, privacy specialist, GDPR compliance, data protection, server-side tracking, Google Analytics, Adobe Analytics, digital analytics consultant">
+    <link rel="canonical" href="https://bolansdaal.com/">
+
     <!-- Preload critical assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +64,56 @@
         document.addEventListener('DOMContentLoaded', function () {
             emailjs.init("j-GmNdC_RO86e2Gvc");
         });
+    </script>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Bo Lansdaal",
+      "jobTitle": "Technical Web Analytics Consultant & Privacy Specialist",
+      "url": "https://bolansdaal.com",
+      "image": "https://bolansdaal.com/images/bo-lansdaal.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/bo-lansdaal/",
+        "https://github.com/BoLans1/"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "AkzoNobel"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Code With Mosh"
+      },
+      "knowsAbout": [
+        "Web Analytics",
+        "Privacy Management",
+        "GDPR Compliance",
+        "Data Protection",
+        "Server-side Tracking",
+        "Google Analytics",
+        "Adobe Analytics",
+        "Tag Management"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified Information Privacy Technologist (CIPT)",
+          "credentialCategory": "certification",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "IAPP"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Google Analytics Individual Qualification",
+          "credentialCategory": "certification"
+        }
+      ]
+    }
     </script>
 
     <style>
@@ -73,7 +154,7 @@
             transform: scale(1.05) rotate(5deg);
         }
 
-        .hero h1 {font: 1em sans-serif;
+        .hero h1 {
             font-weight: 700;
             margin-bottom: 1.5rem;
             letter-spacing: -0.5px;
@@ -310,30 +391,34 @@
                 <div class="text-center mb-5">
                     <h2 class="display-4 fw-bold position-relative d-inline-block">
                         About Me
-                        <span class="position-absolute w-100" style="height: 4px; background: linear-gradient(to right, var(--color-primary), var(--color-secondary)); bottom: -10px; left: 0; border-radius: 2px;"></span>
+                        <span class="position-absolute w-100"
+                            style="height: 4px; background: linear-gradient(to right, var(--color-primary), var(--color-secondary)); bottom: -10px; left: 0; border-radius: 2px;"></span>
                     </h2>
                 </div>
-                
+
                 <div class="row align-items-center">
                     <div class="col-lg-5 mb-5 mb-lg-0">
                         <div class="position-relative profile-image-container text-center text-lg-start">
                             <!-- Main circular image with proper sizing and shadow -->
                             <div class="position-relative d-inline-block">
-                                <img src="images/bo-lansdaal.png" alt="Bo Lansdaal" 
-                                    class="img-fluid rounded-circle shadow-lg profile-image"
+                                <img src="images/bo-lansdaal.png" alt="Bo Lansdaal - Technical Web Analytics Consultant"
+                                    class="img-fluid rounded-circle shadow-lg profile-image" loading="lazy"
                                     style="width: 300px; height: 300px; object-fit: cover; border: 5px solid white; z-index: 2; position: relative;">
-                                
+
                                 <!-- Decorative elements -->
-                                <div class="position-absolute top-50 start-50 translate-middle-x rounded-circle" 
-                                    style="width: 320px; height: 320px; border: 2px dashed var(--color-primary); opacity: 0.4; z-index: 1;"></div>
-                                    
-                                <div class="position-absolute" 
-                                    style="bottom: -25px; right: -25px; background: var(--color-primary); width: 100px; height: 100px; border-radius: 20px; transform: rotate(10deg); opacity: 0.2; z-index: 1;"></div>
-                                    
-                                <div class="position-absolute" 
-                                    style="top: -20px; left: -20px; background: var(--color-secondary); width: 80px; height: 80px; border-radius: 15px; transform: rotate(-15deg); opacity: 0.2; z-index: 1;"></div>
+                                <div class="position-absolute top-50 start-50 translate-middle-x rounded-circle"
+                                    style="width: 320px; height: 320px; border: 2px dashed var(--color-primary); opacity: 0.4; z-index: 1;">
+                                </div>
+
+                                <div class="position-absolute"
+                                    style="bottom: -25px; right: -25px; background: var(--color-primary); width: 100px; height: 100px; border-radius: 20px; transform: rotate(10deg); opacity: 0.2; z-index: 1;">
+                                </div>
+
+                                <div class="position-absolute"
+                                    style="top: -20px; left: -20px; background: var(--color-secondary); width: 80px; height: 80px; border-radius: 15px; transform: rotate(-15deg); opacity: 0.2; z-index: 1;">
+                                </div>
                             </div>
-                            
+
                             <!-- Expertise badges -->
                             <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mt-4">
                                 <span class="badge bg-primary rounded-pill px-3 py-2">Web Analytics</span>
@@ -343,47 +428,58 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-7">
                         <div class="about-content ps-lg-4">
-                            <p class="lead mb-4 text-primary fw-bold">Technical Web Analytics Consultant & Privacy Specialist</p>
-                            
-                            <p class="mb-4">As a specialist in this field, I bring a unique blend of expertise in digital analytics, privacy management, and data protection. My focus is on creating solutions that balance powerful analytics capabilities with strict privacy requirements.</p>
-                            
-                            <p class="mb-4">With extensive experience working with global brands like <span class="fw-medium">AkzoNobel</span>, <span class="fw-medium">Signify</span>, and <span class="fw-medium">FrieslandCampina</span>, I specialize in creating robust measurement frameworks that enable organizations to leverage data effectively while maintaining the highest standards of privacy compliance.</p>
-                            
-                            <p class="mb-4">I'm committed to staying at the forefront of privacy regulations and information security standards, ensuring that the organizations I work with not only comply with current laws but are also prepared for future developments in the field.</p>
-                            
+                            <p class="lead mb-4 text-primary fw-bold">Technical Web Analytics Consultant & Privacy
+                                Specialist</p>
+
+                            <p class="mb-4">As a specialist in this field, I bring a unique blend of expertise in
+                                digital analytics, privacy management, and data protection. My focus is on creating
+                                solutions that balance powerful analytics capabilities with strict privacy requirements.
+                            </p>
+
+                            <p class="mb-4">With extensive experience working with global brands like <span
+                                    class="fw-medium">AkzoNobel</span>, <span class="fw-medium">Signify</span>, and
+                                <span class="fw-medium">FrieslandCampina</span>, I specialize in creating robust
+                                measurement frameworks that enable organizations to leverage data effectively while
+                                maintaining the highest standards of privacy compliance.
+                            </p>
+
+                            <p class="mb-4">I'm committed to staying at the forefront of privacy regulations and
+                                information security standards, ensuring that the organizations I work with not only
+                                comply with current laws but are also prepared for future developments in the field.</p>
+
                             <div class="key-strengths mb-4">
                                 <div class="d-flex align-items-center mb-2">
-                                    <div class="me-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10" style="width: 36px; height: 36px;">
+                                    <div class="me-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10"
+                                        style="width: 36px; height: 36px;">
                                         <i class="fas fa-shield-alt text-primary"></i>
                                     </div>
                                     <div>Privacy-first approach to data collection and analytics</div>
                                 </div>
                                 <div class="d-flex align-items-center mb-2">
-                                    <div class="me-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10" style="width: 36px; height: 36px;">
+                                    <div class="me-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10"
+                                        style="width: 36px; height: 36px;">
                                         <i class="fas fa-chart-line text-primary"></i>
                                     </div>
                                     <div>Expert in designing compliant measurement frameworks</div>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <div class="me-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10" style="width: 36px; height: 36px;">
+                                    <div class="me-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10"
+                                        style="width: 36px; height: 36px;">
                                         <i class="fas fa-server text-primary"></i>
                                     </div>
                                     <div>Server-side tracking implementation specialist</div>
                                 </div>
                             </div>
-                            
+
                             <div class="mt-4 d-flex flex-wrap gap-3">
                                 <a href="#contact" class="btn btn-primary px-4 py-2 rounded-pill">
                                     <i class="fas fa-envelope me-2"></i>Contact Me
                                 </a>
                                 <a href="#experiences" class="btn btn-outline-secondary px-4 py-2 rounded-pill">
                                     <i class="fas fa-briefcase me-2"></i>View Experience
-                                </a>
-                                <a href="cv.pdf" class="btn btn-outline-dark px-4 py-2 rounded-pill" target="_blank">
-                                    <i class="fas fa-file-alt me-2"></i>Download CV
                                 </a>
                             </div>
                         </div>
@@ -526,22 +622,22 @@
                                     <h3 class="mb-0">Performance Marketeer</h3>
                                     <h4 class="text-muted">Blox & BTC Direct</h4>
                                 </div>
-                            <p class="text-muted mb-3">April 2021 - March 2022</p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Responsible
-                                    for creating and running campaigns, managing media- and advertising agencies.
-                                </li>
-                                <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Measured and
-                                    reported on website and app traffic, behavior, and performance to all
-                                    stakeholders.</li>
-                                <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Achieved a
-                                    110% increase in new users through 5 campaigns during the crypto summer of 2022.
-                                </li>
-                            </ul>
+                                <p class="text-muted mb-3">April 2021 - March 2022</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Responsible
+                                        for creating and running campaigns, managing media- and advertising agencies.
+                                    </li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Measured and
+                                        reported on website and app traffic, behavior, and performance to all
+                                        stakeholders.</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle me-2 text-primary"></i> Achieved a
+                                        110% increase in new users through 5 campaigns during the crypto summer of 2022.
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
 
@@ -667,9 +763,11 @@
                         </div>
                         <div class="col">
                             <div class="tool-item">
-                                <svg class="mb-3 text-danger" style="width: 48px; height: 48px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <svg class="mb-3 text-danger" style="width: 48px; height: 48px;"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                     <!-- Adobe icon path -->
-                                    <path fill="currentColor" d="M323.1 106h-190C100.8 106 64 133.6 64 176.3v159.3C64 378.6 100.8 406 133.1 406h190c32.3 0 69.1-27.4 69.1-70.3V176.3c0-42.7-36.8-70.3-69.1-70.3zM213.4 337l-30.8-84.3 30.6-89.5 30.6 89.5-30.4 84.3zm-6.7-171l-65 .2 36.5 98.6L104 337h36.6l61.9-171zm145.7 171h-36.2l-54.7-169.9 65.2-.2L352.4 337z"/>
+                                    <path fill="currentColor"
+                                        d="M323.1 106h-190C100.8 106 64 133.6 64 176.3v159.3C64 378.6 100.8 406 133.1 406h190c32.3 0 69.1-27.4 69.1-70.3V176.3c0-42.7-36.8-70.3-69.1-70.3zM213.4 337l-30.8-84.3 30.6-89.5 30.6 89.5-30.4 84.3zm-6.7-171l-65 .2 36.5 98.6L104 337h36.6l61.9-171zm145.7 171h-36.2l-54.7-169.9 65.2-.2L352.4 337z" />
                                 </svg>
                                 <h5>Adobe Analytics</h5>
                             </div>
@@ -722,7 +820,8 @@
                     <div class="col">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body text-center p-4">
-                                <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mx-auto mb-4"
+                                    style="width: 80px; height: 80px;">
                                     <i class="fas fa-chart-bar fa-2x text-white"></i>
                                 </div>
                                 <h3 class="card-title h4">Google Analytics 4</h3>
@@ -753,7 +852,7 @@
                     <div class="col">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body p-4">
-                                <div class="d-flex align-items-center mb-4">f
+                                <div class="d-flex align-items-center mb-4">
                                     <div class="rounded-circle bg-primary p-3 me-3">
                                         <i class="fas fa-shield-alt fa-2x text-white"></i>
                                     </div>
@@ -953,8 +1052,8 @@
                                     class="btn btn-primary rounded-circle me-2">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                </a>
-                                <a href="https://github.com/BoLans1/" target="_blank" class="btn btn-dark rounded-circle me-2">
+                                <a href="https://github.com/BoLans1/" target="_blank"
+                                    class="btn btn-dark rounded-circle me-2">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
